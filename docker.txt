@@ -1,0 +1,11 @@
+Jira
+docker run --name="jira" -d -p 8080:8080 atlassian/jira-software
+
+Redmine
+docker run -d -p 3000:3000 --name="redmine" redmine
+
+Postgre SQL
+docker run --name postgres12 --restart=always -e POSTGRES_PASSWORD=spiker -e POSTGRES_USER=alexey -e POSTGRES_DB=appercutdb -d -p 5432:5432 postgres:12
+docker run --name postgres11 --restart=always -e POSTGRES_PASSWORD=appercut -e POSTGRES_USER=appercut -e POSTGRES_DB=appercut -d -p 5432:5432 postgres:11
+docker run --name postgres10 --restart=always -e POSTGRES_PASSWORD=appercut -e POSTGRES_USER=appercut -e POSTGRES_DB=appercut -d -p 5432:5432 postgres:10
+docker run --name postgres9 --restart=always -e POSTGRES_PASSWORD=appercut -e POSTGRES_USER=appercut -e POSTGRES_DB=appercut -d -p 5432:5432 postgres:9
